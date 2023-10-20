@@ -5,6 +5,8 @@ const app = express();
 const time = require("express-timestamp");
 const cors = require("cors");
 
+app.use(express.static("dist"));
+
 app.use(cors());
 app.use(time.init);
 app.use(express.json());
